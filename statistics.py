@@ -8,15 +8,15 @@ names = ['price', 'horsepower', 'luxury', 'efficiency', 'price per hp', 'weight'
 dataset = read_csv('input/data.csv', names=names)
 
 # Printout data
-print("━━━━━━━━━━━━┫ START ┣━━━━━━━━━━━━")
+print("────────────┤ START ├────────────")
 print(dataset.shape)
 print("──────────────────────────────────")
 print(dataset.head(20))
 print("──────────────────────────────────")
 print(dataset.describe())
 print("──────────────────────────────────")
-print(dataset.groupby('class').size())
-print("━━━━━━━━━━━━┫ END ┣━━━━━━━━━━━━")
+print(dataset.groupby('brand').size())
+print("────────────┤ END ├────────────")
 
 # Define layout and plot all graphs, save them into output/
 dataset.plot(kind='box', subplots=True, layout=(2,3), sharex=False, sharey=False)
