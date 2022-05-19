@@ -5,7 +5,7 @@ from matplotlib import pyplot
 
 # Define class names and import data from file
 names = ['price', 'horsepower', 'luxury', 'efficiency', 'price per hp', 'weight', 'brand']
-dataset = read_csv('input/data.csv', names=names)
+dataset = read_csv('input/data.csv', names=names, dtype=None, encoding="utf-8")
 
 # Printout data
 print("────────────┤ START ├────────────")
